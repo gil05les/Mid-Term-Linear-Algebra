@@ -24,6 +24,7 @@ def main():
         new_augumented_matrix = gauss_elimination(augumented_matrix, size_matrix)
         inverse = get_inverse(new_augumented_matrix, size_matrix)
         result = solve_linear_equations(inverse, right_hand_side_vector)
+        print("\nThe solution vector for your problem is the following:")
         print(result)
 
 
