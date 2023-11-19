@@ -33,6 +33,8 @@ def input_square_matrix():
 
 
 # calculates the determinant to later see if the matrix is invertible
+# for the 2nd part of the function I looked closely into this code: 
+# https://stackoverflow.com/questions/3819500/code-to-solve-determinant-using-python-without-using-scipy-linalg-det
 def calculate_determinant(matrix, size_matrix):
     if size_matrix == 1:
         return matrix[0][0]
@@ -80,7 +82,9 @@ def add_matrices(matrix, identity_matrix):
     return augumented_matrix
 
 
-# performs the gauss elimination, with the augmented matrix, 
+# performs the gauss elimination, with the augmented matrix,
+# I used the following website for rough inspiration:
+# https://stackoverflow.com/questions/64807423/elimination-matrix-gauss-in-python
 def gauss_algorithm(augmented_matrix, size_matrix):
     new_augumented_matrix = [row[:] for row in augmented_matrix]
     for i in range(size_matrix):
